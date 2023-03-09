@@ -62,6 +62,12 @@ export class AppService {
   deleteExpiredUsers() {
     this.logger.log('Deleting expired users...');
   }
+  
+  aysnc createUser(email:string,password:string):Promise<User>{
+  
+      return await user.save(email)
+  
+  }
 
 
 }
